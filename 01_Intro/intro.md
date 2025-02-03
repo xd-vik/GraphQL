@@ -84,3 +84,7 @@ Scenario: User ka name aur email chahiye.
         Query bhejo: getUser(id: "123") { name, email }
 
         Response: Sirf name aur email aayega.
+
+# Preview
+
+![img](./image.png)
