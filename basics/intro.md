@@ -69,6 +69,28 @@ Server Response
 }
 ```
 
+### using variables
+
+```javascript
+const gqlServer = new ApolloServer({
+  typeDefs: `
+      type Query{
+        hello: String
+        say(name:String):String
+      }
+    `,
+
+  //Resolvers
+
+  resolvers: {
+    Query: {
+      hello: () => `hello from GraphQL Server`,
+      say: (_, { name }: { name: String }) => `Hey ${name} How are you ?`,
+    },
+  },
+});
+```
+
 ### GraphQL vs REST Example
 
 Scenario: User ka name aur email chahiye.
