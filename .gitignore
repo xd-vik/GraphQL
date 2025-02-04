@@ -93,7 +93,7 @@ out
 .nuxt
 dist
 build
-prisma/migrations
+migrations
 
 # Gatsby files
 .cache/
