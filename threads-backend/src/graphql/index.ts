@@ -5,7 +5,7 @@ export async function createGraphqlServer() {
   const gqlServer = new ApolloServer({
     typeDefs: `
       type Query{
-        hello:String
+        ${User.queries}
       }
       type Mutation{
       ${User.mutations}
@@ -24,6 +24,4 @@ export async function createGraphqlServer() {
   await gqlServer.start();
 
   return gqlServer;
-
-  
 }
